@@ -1,0 +1,14 @@
+.content-box__link {
+    display: block;
+    width: 100%;
+    padding: 2.5rem;
+    text-decoration: none;
+    font-family: "Gill Sans", sans-searif, serif;
+    font-size: 1.3rem;
+    color: black;
+    align-self: center;
+}
+
+.content-box__link:hover {
+    color: #141491;
+ }

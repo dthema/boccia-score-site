@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="бочча,счёт,спорт">
     <meta name="description" content="Сайт для отображения актуальной информации об играх всероссийских и региональных соревнований по Бочча">
-    <link href="outlines.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
     <title>Boccia score</title>
 </head>
-<body>
+<body class="body">
     <header class="header">
         <nav class="inline-menu">
             <ul class="inline-menu__list">
@@ -35,52 +35,52 @@
         </article>
         <article class="content-group">
             <h2 class="content-group__title">Последние соревнования</h2>
-            <div class="content-box content-box_shadowed-items">
-                <section class="content-box__item">
-                    <a href="#">Чемпионат России 2023</a>
+            <div class="content-box">
+                <section class="content-box__item content-box__item_shadowed">
+                    <a class="content-box__link" href="#">Чемпионат России 2023</a>
                 </section>
-                <section class="content-box__item">
-                    <a href="#">ДЮВС (Самара) 2023</a>
+                <section class="content-box__item content-box__item_shadowed">
+                    <a class="content-box__link" href="#">ДЮВС (Самара) 2023</a>
                 </section>
-                <section class="content-box__item">
-                    <a href="#">Международные соревнования "Мы вместе" 2023</a>
+                <section class="content-box__item content-box__item_shadowed">
+                    <a class="content-box__link" href="#">Международные соревнования "Мы вместе" 2023</a>
                 </section>
-                <section class="content-box__item">
-                    <a href="#">ЛИП 2023</a>
+                <section class="content-box__item content-box__item_shadowed">
+                    <a class="content-box__link" href="#">ЛИП 2023</a>
                 </section>
             </div>
         </article>
         <article class="content-group">
             <h2 class="content-group__title">Играют сейчас</h2>
             <div class="content-box game-box">
-                <section class="game-box__item">
+                <section class="content-box__item game-box__item">
                     <div class="game-box__players">
-                        <span class="game-box__red-player">Игрок 1</span>
-                        <span class="game-box__players_delimiter"> - </span>
-                        <span class="game-box__blue-player">Игрок 2</span>
+                        <span class="game-box__players__player game-box__players__red">Игрок 1</span>
+                        <span class="game-box__players__delimiter"> - </span>
+                        <span class="game-box__players__player game-box__players__blue">Игрок 2</span>
                     </div>
-                    <div class="game-box__score">
-                        <span class="game-box__red-player-score">3</span>
-                        <span class="game-box__score_delimiter"> : </span>
-                        <span class="game-box__blue-player-score">2</span>
+                    <div class="game-box__scores">
+                        <span class="game-box__scores__score game-box__scores__red">3</span>
+                        <span class="game-box__scores__delimiter"> : </span>
+                        <span class="game-box__scores__score game-box__scores__blue">2</span>
                     </div>
                     <div class="game-box__round">
-                        <span class="game-box__round-number">4</span> энд
+                        <span class="game-box__round__number">4</span> энд
                     </div>
                 </section>
-                <section class="game-box__item">
+                <section class="content-box__item game-box__item">
                     <div class="game-box__players">
-                        <span class="game-box__red-player">Игрок 3</span>
-                        <span class="game-box__players_delimiter"> - </span>
-                        <span class="game-box__blue-player">Игрок 4</span>
+                        <span class="game-box__players__player game-box__players__red">Игрок 3</span>
+                        <span class="game-box__players__delimiter"> - </span>
+                        <span class="game-box__players__player game-box__players__blue">Игрок 4</span>
                     </div>
-                    <div class="game-box__score">
-                        <span class="game-box__red-player-score">6</span>
-                        <span class="game-box__score_delimiter"> : </span>
-                        <span class="game-box__blue-player-score">0</span>
+                    <div class="game-box__scores">
+                        <span class="game-box__scores__score game-box__scores__red">6</span>
+                        <span class="game-box__scores__delimiter"> : </span>
+                        <span class="game-box__scores__score game-box__scores__blue">0</span>
                     </div>
                     <div class="game-box__round">
-                        <span class="game-box__round-number">3</span> энд
+                        <span class="game-box__round__number">3</span> энд
                     </div>
                 </section>
             </div>

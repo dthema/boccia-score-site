@@ -1,0 +1,16 @@
+@import "../../blocks/header/header.css";
+@import "../../blocks/inline-menu/inline-menu.css";
+@import "../../blocks/description-box/description-box.css";
+@import "../../blocks/content-group/content-group.css";
+@import "../../blocks/content-box/content-box.css";
+@import "../../blocks/logo/logo.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
