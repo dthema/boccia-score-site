@@ -8,70 +8,106 @@
     <title>Boccia score</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Текущие игры</a></li>
-                <li><a href="#">Соревнования</a></li>
-                <li><a href="#">Рейтинг</a></li>
+    <header class="header">
+        <nav class="inline-menu">
+            <ul class="inline-menu__list">
+                <li class="inline-menu__item">
+                    <a class="inline-menu__link" href="#">Главная</a>
+                </li>
+                <li class="inline-menu__item">
+                    <a class="inline-menu__link" href="#">Текущие игры</a>
+                </li>
+                <li class="inline-menu__item">
+                    <a class="inline-menu__link" href="#">Соревнования</a>
+                </li>
+                <li class="inline-menu__item">
+                    <a class="inline-menu__link" href="#">Рейтинг</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <article class="main-description-box">
-            <p class="main-description">
-                <strong>Boccia Score</strong> - это платформа, предоставляющая доступ к результатам
+    <main class="main">
+        <article class="description-box">
+            <p class="description-box__text">
+                <strong>Boccia Score</strong> - это сервис, предоставляющий доступ к результатам
                 предыдущих соревнований по Бочча, а также к информации по играм в режиме реального времени
             </p>
         </article>
-        <article>
-            <h2>Последние соревнования:</h2>
-            <section>
-                <h3>Чемпионат России 2023</h3>
-                <button>Результаты игр</button>
-            </section>
-            <section>
-                <h3>ДЮВС (Самара) 2023</h3>
-                <button>Результаты игр</button>
-            </section>
-            <section>
-                <h3>Международные соревнования "Мы вместе" 2023</h3>
-                <button>Результаты игр</button>
-            </section>
-            <section>
-                <h3>ЛИП 2023</h3>
-                <button>Результаты игр</button>
-            </section>
+        <article class="content-group">
+            <h2 class="content-group__title">Последние соревнования</h2>
+            <div class="content-box content-box_shadowed-items">
+                <section class="content-box__item">
+                    <a href="#">Чемпионат России 2023</a>
+                </section>
+                <section class="content-box__item">
+                    <a href="#">ДЮВС (Самара) 2023</a>
+                </section>
+                <section class="content-box__item">
+                    <a href="#">Международные соревнования "Мы вместе" 2023</a>
+                </section>
+                <section class="content-box__item">
+                    <a href="#">ЛИП 2023</a>
+                </section>
+            </div>
         </article>
-        <article>
-            <h2>Играют сейчас</h2>
-            <section>
-                <h3>Игрок 1 - Игрок 2</h3>
-                <p>2 : 3</p>
-                <p>3 энд</p>
-            </section>
-            <section>
-                <h3>Игрок 3 - Игрок 4</h3>
-                <p>6 : 0</p>
-                <p>2 энд</p>
-            </section>
+        <article class="content-group">
+            <h2 class="content-group__title">Играют сейчас</h2>
+            <div class="content-box game-box">
+                <section class="game-box__item">
+                    <div class="game-box__players">
+                        <span class="game-box__red-player">Игрок 1</span>
+                        <span class="game-box__players_delimiter"> - </span>
+                        <span class="game-box__blue-player">Игрок 2</span>
+                    </div>
+                    <div class="game-box__score">
+                        <span class="game-box__red-player-score">3</span>
+                        <span class="game-box__score_delimiter"> : </span>
+                        <span class="game-box__blue-player-score">2</span>
+                    </div>
+                    <div class="game-box__round">
+                        <span class="game-box__round-number">4</span> энд
+                    </div>
+                </section>
+                <section class="game-box__item">
+                    <div class="game-box__players">
+                        <span class="game-box__red-player">Игрок 3</span>
+                        <span class="game-box__players_delimiter"> - </span>
+                        <span class="game-box__blue-player">Игрок 4</span>
+                    </div>
+                    <div class="game-box__score">
+                        <span class="game-box__red-player-score">6</span>
+                        <span class="game-box__score_delimiter"> : </span>
+                        <span class="game-box__blue-player-score">0</span>
+                    </div>
+                    <div class="game-box__round">
+                        <span class="game-box__round-number">3</span> энд
+                    </div>
+                </section>
+            </div>
         </article>
     </main>
-    <footer>
-        <pre>
+    <footer class="footer">
+        <pre class="logo">
   _._
 .'--.`
 |  .'|
  `--`
         </pre>
-        <ul>
-            <li>Главная</li>
-            <li>Текущие игры</li>
-            <li>Соревнования</li>
-            <li>Рейтинг</li>
+        <ul class="menu_list">
+            <li class="menu_list__item">
+                <a class="menu_list__link" href="#">Главная</a>
+            </li>
+            <li class="menu_list__item">
+                <a class="menu_list__link" href="#">Текущие игры</a>
+            </li>
+            <li class="menu_list__item">
+                <a class="menu_list__link" href="#">Соревнования</a>
+            </li>
+            <li class="menu_list__item">
+                <a class="menu_list__link" href="#">Рейтинг</a>
+            </li>
         </ul>
-        <p>Беглецов Глеб © 2023</p>
+        <p class="copyright">Беглецов Глеб © 2023</p>
     </footer>
 </body>
 </html>
