@@ -3,7 +3,11 @@
 @import "../../blocks/description-box/description-box.css";
 @import "../../blocks/content-group/content-group.css";
 @import "../../blocks/content-box/content-box.css";
+@import "../../blocks/game-box/game-box.css";
 @import "../../blocks/logo/logo.css";
+@import "../../blocks/menu-list/menu-list.css";
+@import "../../blocks/copyright/copyright.css";
+@import "../../blocks/footer/footer.css";
 
 *{
     margin: 0;
