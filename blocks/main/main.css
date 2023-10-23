@@ -2,4 +2,6 @@
     display: block;
     flex: 1;
     height: 100%;
+    background-color: #fafafa;
+    padding-bottom: 2rem;
 }
