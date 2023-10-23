@@ -1,0 +1,13 @@
+@import "__box/ranking-grid__box.css";
+@import "__item/ranking-grid__item.css";
+@import "__row/ranking-grid__row.css";
+@import "__title/ranking-grid__title.css";
+
+.ranking-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+    padding-inline: 3rem;
+    text-align: center;
+}
