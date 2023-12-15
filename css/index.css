@@ -10,6 +10,7 @@
 @import "../blocks/menu-list/menu-list.css";
 @import "../blocks/copyright/copyright.css";
 @import "../blocks/footer/footer.css";
+@import "../blocks/page-load-info/page-load-info.css";
 
 * {
     margin: 0;
