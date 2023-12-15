@@ -6,6 +6,8 @@
     <meta name="description" content="Всероссийский рейтинг игроков Бочча">
     <link href="css/ranking.css" rel="stylesheet">
     <title>Рейтинг</title>
+    <script src="js/all-pages.js"></script>
+    <script src="js/temp-ranking.js"></script>
 </head>
 <body>
     <header class="header">
@@ -15,13 +17,13 @@
                     <a class="inline-menu__link" href="index.html">Главная</a>
                 </li>
                 <li class="inline-menu__item">
-                    <a class="inline-menu__link" href="#">Текущие игры</a>
+                    <a class="inline-menu__link" href="games.html">Текущие игры</a>
                 </li>
                 <li class="inline-menu__item">
-                    <a class="inline-menu__link" href="#">Соревнования</a>
+                    <a class="inline-menu__link" href="competitions.html">Соревнования</a>
                 </li>
                 <li class="inline-menu__item">
-                    <a class="inline-menu__link" href="#">Рейтинг</a>
+                    <a class="inline-menu__link" href="ranking.html">Рейтинг</a>
                 </li>
             </ul>
         </nav>
@@ -29,56 +31,29 @@
     <main class="main">
         <article class="content-group">
             <h2 class="content-group__title">Рейтинг игроков</h2>
-            <div class="ranking-grid">
-                <div class="ranking-grid__row ranking-grid__row_header">
-                    <span class="ranking-grid__item ranking-grid__item_rank">№</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ФИО</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">Очков</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">Регион</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">1</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">100</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">7</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">99</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">12</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">77</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">32</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">33</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">60</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">11</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">90</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">7</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
-                <div class="ranking-grid__row">
-                    <span class="ranking-grid__item ranking-grid__item_rank">123</span>
-                    <span class="ranking-grid__item ranking-grid__item_name">ДлиннаяФамилия ДлинноеИмя ДлинноеОтчество</span>
-                    <span class="ranking-grid__item ranking-grid__item_score">1</span>
-                    <span class="ranking-grid__item ranking-grid__item_region">ДлинноеНазвание Региона</span>
-                </div>
+            <div class="filter-box">
+                <form id="addPlayerForm">
+                    <label class="filter-box__label" for="playerName">Имя:</label>
+                    <input class="filter-box__input" type="text" id="playerName" name="playerName" required>
+
+                    <label class="filter-box__label" for="playerPoints">Количество очков:</label>
+                    <input class="filter-box__input" type="number" id="playerPoints" name="playerPoints" required>
+
+                    <label class="filter-box__label" for="playerCity">Регион:</label>
+                    <input class="filter-box__input" type="text" id="playerCity" name="playerCity" required>
+
+                    <button class="filter-box__button" type="button" id="addPlayerButton">Добавить игрока</button>
+                </form>
             </div>
+            <div class="filter-box">
+                <form id="removePlayerForm">
+                    <label class="filter-box__label" for="playerNumber">№ игрока:</label>
+                    <input class="filter-box__input" type="text" id="playerNumber" name="playerNumber" required>
+
+                    <button class="filter-box__button" type="button" id="removePlayerButton">Удалить игрока</button>
+                </form>
+            </div>
+            <div class="ranking-grid-container"></div>
         </article>
     </main>
     <footer class="footer">
@@ -93,13 +68,13 @@
                 <a class="menu-list__link" href="index.html">Главная</a>
             </li>
             <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Текущие игры</a>
+                <a class="menu-list__link" href="games.html">Текущие игры</a>
             </li>
             <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Соревнования</a>
+                <a class="menu-list__link" href="competitions.html">Соревнования</a>
             </li>
             <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Рейтинг</a>
+                <a class="menu-list__link" href="ranking.html">Рейтинг</a>
             </li>
         </ul>
         <p class="copyright">Беглецов Глеб © 2023</p>
