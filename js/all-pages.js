@@ -83,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleKeyPress(event) {
-        // Проверка, что нажата именно клавиша 'L'
         if (event.key === 'L' || event.key === 'l') {
             if (isListen) {
                 annyang.abort();
