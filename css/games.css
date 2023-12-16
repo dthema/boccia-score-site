@@ -12,6 +12,7 @@
 @import "../blocks/copyright/copyright.css";
 @import "../blocks/footer/footer.css";
 @import "../blocks/page-load-info/page-load-info.css";
+@import "../blocks/preloaded/preloaded.css";
 
 * {
     margin: 0;
