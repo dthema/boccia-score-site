@@ -6,3 +6,9 @@
     margin-left: 2rem;
     list-style: none;
 }
+
+@media all and (max-width: 550px) {
+    .menu-list {
+        display: none;
+    }
+}
