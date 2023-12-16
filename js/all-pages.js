@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let startTime = performance.now();
+
+    window.addEventListener("load", () => {
+        let endTime = performance.now();
+        let loadTime = endTime - startTime;
+
+        let footer = document.querySelector(".footer");
+        let loadInfo = document.createElement("p");
+        loadInfo.textContent = "Время загрузки страницы: " + loadTime.toFixed(2) + " мс";
+        loadInfo.classList.add("page-load-info");
+        footer.appendChild(loadInfo);
+    });
+
     let currentPage = window.location.href;
     let menuLinks = document.querySelectorAll(".inline-menu__link");
 
@@ -8,17 +21,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    let headroomScript = document.createElement('script');
+    headroomScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js';
+    document.body.appendChild(headroomScript);
+    headroomScript.onload = () => {
+        let header = document.querySelector("header");
+        const options = {
+            offset: 0,
+            tolerance: {
+                up: 15,
+                down: 0
+            },
+            classes: {
+                initial: "headroom",
+                pinned: "headroom-pinned",
+                unpinned: "headroom-unpinned",
+            },
+        };
+        let headroom = new Headroom(header, options);
+        headroom.init();
+    }
+
     let isListen = false;
     let annyangScript = document.createElement('script');
     annyangScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js';
     document.body.appendChild(annyangScript);
 
-    annyangScript.onload = function() {
+    annyangScript.onload = () => {
         let speechkittScript = document.createElement('script');
         speechkittScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js';
         document.body.appendChild(speechkittScript);
 
-        speechkittScript.onload = function() {
+        speechkittScript.onload = () => {
             initializeAnnyang();
         };
     };
@@ -62,20 +96,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener('keydown', handleKeyPress);
 });
-
-(function() {
-    document.addEventListener("DOMContentLoaded", function() {
-        let startTime = performance.now();
-
-        window.addEventListener("load", function() {
-            let endTime = performance.now();
-            let loadTime = endTime - startTime;
-
-            let footer = document.querySelector(".footer");
-            let loadInfo = document.createElement("p");
-            loadInfo.textContent = "Время загрузки страницы: " + loadTime.toFixed(2) + " мс";
-            loadInfo.classList.add("page-load-info");
-            footer.appendChild(loadInfo);
-        });
-    });
-})();
