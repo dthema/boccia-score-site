@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let gamesList = document.getElementById("gameList");
-    let preloader = document.getElementById("preloaderGames");
+    let gamesList = document.getElementsByClassName("game-box")[0];
+    let preloader = document.getElementsByClassName("preloader-games")[0];
 
     function fetchData() {
         preloader.style.display = "block";
